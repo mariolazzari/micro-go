@@ -30,4 +30,13 @@ There are several "easier" ways to do this, but this is the most repeatable for 
 ```sh
 go mod init github.com/mariolazzari/micro-go
 go get github.com/google/uuid
+go get -u gorm.io/gorm
+go get gorm.io/driver/postgres
+```
+
+### Server setup
+
+```sh
+go get github.com/fpmoles/go-microservices/internal/database
+go get github.com/labstack/echo/v4
 ```
