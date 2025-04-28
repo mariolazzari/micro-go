@@ -3,7 +3,7 @@ package database
 import (
 	"context"
 
-	"github.com/mariolazzari/micro-go/internal/models"
+	"github.com/fpmoles/go-microservices/internal/models"
 )
 
 func (c Client) GetAllCustomers(ctx context.Context, emailAddress string) ([]models.Customer, error) {

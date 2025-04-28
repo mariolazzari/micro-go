@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mariolazzari/micro-go/internal/models"
+	"github.com/fpmoles/go-microservices/internal/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
@@ -15,6 +15,12 @@ type DatabaseClient interface {
 	Ready() bool
 
 	GetAllCustomers(ctx context.Context, emailAddress string) ([]models.Customer, error)
+
+	GetAllProducts(ctx context.Context, vendorID string) ([]models.Product, error)
+
+	GetAllServices(ctx context.Context) ([]models.Service, error)
+
+	GetAllVendors(ctx context.Context) ([]models.Vendor, error)
 }
 
 type Client struct {
